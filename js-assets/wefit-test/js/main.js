@@ -52,3 +52,16 @@ document.addEventListener('DOMContentLoaded', () => {
   listGroup.appendChild(fourthItem);
   listGroup.appendChild(fifthItem);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.getElementById('main-menu');
+  if (!menu) return;
+
+  menu.classList.remove('btn-group-vertical');
+  menu.classList.add('btn-group');
+
+  menu.querySelectorAll('.btn').forEach(btn => {
+    btn.style.marginRight = '4px';
+    btn.style.borderRadius = '0.25rem';
+  });
+});
