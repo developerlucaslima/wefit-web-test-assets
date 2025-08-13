@@ -15,3 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
     animalsBtn.classList.add('btn-success');
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('header-jumbotron');
+  if (!header) return;
+
+  header.style.backgroundColor = 'var(--gray-dark)';
+  header.style.color = 'var(--white)';
+
+  header.style.textAlign = 'right';
+
+  const headerBtn = header.querySelector('.btn');
+  if (headerBtn) {
+    headerBtn.classList.remove('btn-primary');
+    headerBtn.classList.add('btn-success');
+  }
+});
